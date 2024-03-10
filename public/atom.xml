@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Lilly Grella</title>
+    <subtitle>AdiDoks is a Zola theme helping you build modern documentation websites, which is a port of the Hugo theme Doks for Zola.</subtitle>
+    <link rel="self" type="application/atom+xml" href="lillygrella.netlify.app/atom.xml"/>
+    <link rel="alternate" type="text/html" href="lillygrella.netlify.app"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-02-02T08:20:00+00:00</updated>
+    <id>lillygrella.netlify.app/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Create a Zola Static Website with a theme: A Tutorial</title>
+        <published>2024-02-02T08:20:00+00:00</published>
+        <updated>2021-05-01T08:20:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/blog/start-adidoks/"/>
+        <id>lillygrella.netlify.app/blog/start-adidoks/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/blog/start-adidoks/">&lt;h2 id=&quot;requirements&quot;&gt;Requirements&lt;&#x2F;h2&gt;
+&lt;p&gt;Before using the theme, you need to install the &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; ≥ 0.15.0.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;run-the-theme-directly&quot;&gt;Run the Theme Directly&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; clone https:&#x2F;&#x2F;github.com&#x2F;aaranxu&#x2F;adidoks.git
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; adidoks
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Visit &lt;code&gt;http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;&lt;&#x2F;code&gt; in the browser.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
+&lt;p&gt;Just earlier we showed you how to run the theme directly. Now we start to
+install the theme in an existing site step by step.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;step-1-create-a-new-zola-site&quot;&gt;Step 1: Create a new zola site&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; init mysite
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-2-install-adidoks&quot;&gt;Step 2: Install AdiDoks&lt;&#x2F;h3&gt;
+&lt;p&gt;Download this theme to your themes directory:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; mysite&#x2F;themes
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; clone https:&#x2F;&#x2F;github.com&#x2F;aaranxu&#x2F;adidoks.git
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Or install as a submodule:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; mysite
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; init  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# if your project is a git repository already, ignore this command
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule add https:&#x2F;&#x2F;github.com&#x2F;aaranxu&#x2F;adidoks.git themes&#x2F;adidoks
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-3-configuration&quot;&gt;Step 3: Configuration&lt;&#x2F;h3&gt;
+&lt;p&gt;Enable the theme in your &lt;code&gt;config.toml&lt;&#x2F;code&gt; in the site derectory:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;theme &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;adidoks&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Or copy the &lt;code&gt;config.toml.example&lt;&#x2F;code&gt; from the theme directory to your project&#x27;s
+root directory:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;adidoks&#x2F;config.toml.example config.toml
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-4-add-new-content&quot;&gt;Step 4: Add new content&lt;&#x2F;h3&gt;
+&lt;p&gt;You can copy the content from the theme directory to your project:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cp -r&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;adidoks&#x2F;content .
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You can modify or add new posts in the &lt;code&gt;content&#x2F;blog&lt;&#x2F;code&gt;, &lt;code&gt;content&#x2F;docs&lt;&#x2F;code&gt; or other
+content directories as needed.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;step-5-run-the-project&quot;&gt;Step 5: Run the project&lt;&#x2F;h3&gt;
+&lt;p&gt;Just run &lt;code&gt;zola serve&lt;&#x2F;code&gt; in the root path of the project:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;AdiDoks will start the Zola development web server accessible by default at 
+&lt;code&gt;http:&#x2F;&#x2F;127.0.0.1:1111&lt;&#x2F;code&gt;. Saved changes will live reload in the browser.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Economics of Campus Sustainability</title>
+        <published>2021-05-01T19:30:00+00:00</published>
+        <updated>2021-05-01T19:30:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/docs/Research/research1/"/>
+        <id>lillygrella.netlify.app/docs/Research/research1/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/docs/Research/research1/">&lt;ul&gt;
+&lt;li&gt;Link to Published Paper&lt;&#x2F;li&gt;
+&lt;li&gt;Summary of Paper&lt;&#x2F;li&gt;
+&lt;li&gt;My Contribution&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Intergenerational Mobility</title>
+        <published>2021-05-01T19:30:00+00:00</published>
+        <updated>2021-05-01T19:30:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/docs/Research/research2/"/>
+        <id>lillygrella.netlify.app/docs/Research/research2/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/docs/Research/research2/">&lt;ul&gt;
+&lt;li&gt;Link to Paper&lt;&#x2F;li&gt;
+&lt;li&gt;Summary&lt;&#x2F;li&gt;
+&lt;li&gt;My contribution&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>BA in Economics</title>
+        <published>2021-05-01T18:20:00+00:00</published>
+        <updated>2021-05-01T18:20:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/docs/Coursework/wlu/"/>
+        <id>lillygrella.netlify.app/docs/Coursework/wlu/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/docs/Coursework/wlu/">&lt;h2 id=&quot;economics-core&quot;&gt;Economics Core&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Microeconomic Theory&lt;&#x2F;li&gt;
+&lt;li&gt;Macroeconomic Theory&lt;&#x2F;li&gt;
+&lt;li&gt;Econometrics&lt;&#x2F;li&gt;
+&lt;li&gt;Advanced Research Seminar&lt;&#x2F;li&gt;
+&lt;li&gt;Fundamentals of Programming&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;economics-electives&quot;&gt;Economics Electives&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Urban Economics&lt;&#x2F;li&gt;
+&lt;li&gt;Comparative Institutional Economics&lt;&#x2F;li&gt;
+&lt;li&gt;Development Economcs&lt;&#x2F;li&gt;
+&lt;li&gt;Environmental Economics&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;mathematics&quot;&gt;Mathematics&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Formal Logic&lt;&#x2F;li&gt;
+&lt;li&gt;Intermediate Formal Logic&lt;&#x2F;li&gt;
+&lt;li&gt;Calculus 1, 2, 3&lt;&#x2F;li&gt;
+&lt;li&gt;Linear Algebra&lt;&#x2F;li&gt;
+&lt;li&gt;Applied Statistics&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>BA in Political Science</title>
+        <published>2021-05-01T18:20:00+00:00</published>
+        <updated>2021-05-01T18:20:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/docs/Coursework/wlu2/"/>
+        <id>lillygrella.netlify.app/docs/Coursework/wlu2/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/docs/Coursework/wlu2/">&lt;h2 id=&quot;political-science-core&quot;&gt;Political Science Core&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Global Politics&lt;&#x2F;li&gt;
+&lt;li&gt;Seminar on Elections&lt;&#x2F;li&gt;
+&lt;li&gt;Modern Latin America&lt;&#x2F;li&gt;
+&lt;li&gt;Congress and Legislative Process&lt;&#x2F;li&gt;
+&lt;li&gt;Poverty Studies&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;political-science-electives&quot;&gt;Political Science Electives&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Incarceration and Inequality&lt;&#x2F;li&gt;
+&lt;li&gt;Black American Politics&lt;&#x2F;li&gt;
+&lt;li&gt;Washington and the Art of Leadership&lt;&#x2F;li&gt;
+&lt;li&gt;Post Communism and New Democracies&lt;&#x2F;li&gt;
+&lt;li&gt;Terrorism&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>MS in Computer Science</title>
+        <published>2021-05-01T18:10:00+00:00</published>
+        <updated>2021-05-01T18:10:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/docs/Coursework/du/"/>
+        <id>lillygrella.netlify.app/docs/Coursework/du/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/docs/Coursework/du/">&lt;h2 id=&quot;machine-learning-and-ai&quot;&gt;&lt;u&gt;Machine Learning and AI&lt;&#x2F;u&gt;&lt;&#x2F;h2&gt;
+&lt;h5 id=&quot;natural-language-processing&quot;&gt;Natural Language Processing&lt;&#x2F;h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Topics of Focus: Language Models, Predictive Text&lt;&#x2F;li&gt;
+&lt;li&gt;Technologies: Pytorch, Numpy&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;computer-vision&quot;&gt;Computer Vision&lt;&#x2F;h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Topics of Focus: visual recognition, visual motion analysis, and visual reconstruction&lt;&#x2F;li&gt;
+&lt;li&gt;Technologies: CV2, Numpy, Scikit&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;data-science&quot;&gt;Data Science&lt;&#x2F;h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Topics of Focus: Data Mining, Regression Analysis, Decision Trees&lt;&#x2F;li&gt;
+&lt;li&gt;Technologies: Pandas, Scikit, R, Python&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;data-processing&quot;&gt;&lt;u&gt;Data Processing &lt;&#x2F;u&gt;&lt;&#x2F;h2&gt;
+&lt;h5 id=&quot;data-engineering-systems&quot;&gt;Data Engineering Systems&lt;&#x2F;h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Topics of Focus: DevOps, CI&#x2F;CD, DBMS, Load testing&lt;&#x2F;li&gt;
+&lt;li&gt;Technologies: Databricks, Azure, SQL, Spark, Flask&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;database-systems&quot;&gt;Database Systems&lt;&#x2F;h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Topics of Focus: DBMS Architecture, Query Algorithms and Optimization, parallel and distributed data processing&lt;&#x2F;li&gt;
+&lt;li&gt;Technologies: PostgreSQL, Flask&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;cloud-computing&quot;&gt;Cloud Computing&lt;&#x2F;h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Topics of Focus: Cloud Architecting, IaC, Containerization, Microservices&lt;&#x2F;li&gt;
+&lt;li&gt;Technologies: AWS, Rust, Python&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>NORC at the University of Chicago</title>
+        <published>2021-05-01T08:00:00+00:00</published>
+        <updated>2021-05-01T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/docs/Job-Experience/1-norc/"/>
+        <id>lillygrella.netlify.app/docs/Job-Experience/1-norc/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/docs/Job-Experience/1-norc/">&lt;h2 id=&quot;positions&quot;&gt;&lt;u&gt; Positions &lt;&#x2F;u&gt;&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;data-scientist-i&quot;&gt;Data Scientist I&lt;&#x2F;h3&gt;
+&lt;p&gt;December 2022 - Present &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Design and execute automated data validation and verification processes in SAS and SQL, minimizing data
+discrepancies and enhancing overall data integrity&lt;&#x2F;li&gt;
+&lt;li&gt;Pioneered the implementation of a version control process using Bitbucket in a previously non-version-controlled
+team, delivering comprehensive training to team members and transitioning project processes, resulting in improved
+documentation and enhanced collaboration within the team&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;senior-data-analyst&quot;&gt;Senior Data Analyst&lt;&#x2F;h3&gt;
+&lt;p&gt;August 2021 - December 2022&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Review and respond to RFPs by researching and writing about technical data solutions, from ingestion to
+consumption, regarding the creation and management of statewide insurance databases&lt;&#x2F;li&gt;
+&lt;li&gt;Create comprehensive, interactive reports summarizing ongoing survey findings, providing valuable insights to
+stakeholders and decision-makers during the survey administration phase&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;company-information&quot;&gt;&lt;u&gt; Company Information &lt;&#x2F;u&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Find information about the company here: &lt;a href=&quot;https:&#x2F;&#x2F;www.norc.org&#x2F;&quot;&gt;NORC at the University of Chicago&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Resolution Economics, LLC</title>
+        <published>2021-05-01T08:00:00+00:00</published>
+        <updated>2021-05-01T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/docs/Job-Experience/2-resecon/"/>
+        <id>lillygrella.netlify.app/docs/Job-Experience/2-resecon/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/docs/Job-Experience/2-resecon/">&lt;h2 id=&quot;positions&quot;&gt;&lt;u&gt; Positions &lt;&#x2F;u&gt;&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;senior-consultant&quot;&gt;Senior Consultant&lt;&#x2F;h3&gt;
+&lt;p&gt;March 2020 - August 2021&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Owned end-to-end execution of analysis for high-stakes cases, ultimately producing analyses related to employment discrimination and wage and hour litigation that met the standards of state and federal courts and yielded written testimony and millions of dollars in settlements&lt;&#x2F;li&gt;
+&lt;li&gt;Effectively presented statistical analyses and technical processes to non-technical audiences, such as executive-level managers, in order to further collaborate and improve data solutions&lt;&#x2F;li&gt;
+&lt;li&gt;Conducted code reviews and mentored junior data consultants to ensure code quality, adherence to best practices, and efficient development processes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;consultant&quot;&gt;Consultant&lt;&#x2F;h3&gt;
+&lt;p&gt;December 2018 - March 2020&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Constructed ETL pipelines and managed relational databases with millions of records, functionalized and optimized code in Python, SAS, and SQL, visualized data in charts and tables, and generated interactive models in Excel&lt;&#x2F;li&gt;
+&lt;li&gt;Led teams of 30+ research assistants and entry-level employees to complete large-scale data entry, video observation, in-person observation, and optical character recognition projects&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;analyst&quot;&gt;Analyst&lt;&#x2F;h3&gt;
+&lt;p&gt;July 2018 - December 2018&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;add something here&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;company-information&quot;&gt;&lt;u&gt; Company Information &lt;&#x2F;u&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Find information about the company here: &lt;a href=&quot;https:&#x2F;&#x2F;resecon.com&#x2F;&quot;&gt;Resolution Economics, LLC&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Internships</title>
+        <published>2021-05-01T08:00:00+00:00</published>
+        <updated>2021-05-01T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/docs/Job-Experience/3-internships/"/>
+        <id>lillygrella.netlify.app/docs/Job-Experience/3-internships/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/docs/Job-Experience/3-internships/">&lt;h2 id=&quot;summer-research-scholar&quot;&gt;Summer Research Scholar&lt;&#x2F;h2&gt;
+&lt;p&gt;Washington and Lee University Economics Department&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed Stata code to import, clean, merge and analyze large datasets (e.g., IRS)&lt;&#x2F;li&gt;
+&lt;li&gt;Worked independently and in collaboration with a fellow Research Scholar to problem-solve challenges arising from integrating numerous datasets over many years&lt;&#x2F;li&gt;
+&lt;li&gt;Assembled and presented literature reviews, data cleaning, and regression analyses&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;administrative-support-intern&quot;&gt;Administrative Support Intern&lt;&#x2F;h2&gt;
+&lt;p&gt;Food and Drug Administration&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Investigated New Drug Application paperwork to determine if proximity between production facilities reveals intentionally misrepresented information in pharmaceutical drug filings&lt;&#x2F;li&gt;
+&lt;li&gt;Executed code in Python and Excel VBA to calculate FDA revenue fluctuations due to policy changes surrounding the legal definition of generic prescription drugs&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;sustainability-intern&quot;&gt;Sustainability Intern&lt;&#x2F;h2&gt;
+&lt;p&gt;Washington and Lee University Sustainability Department&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add something here&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;client-engagement-intern&quot;&gt;Client Engagement Intern&lt;&#x2F;h2&gt;
+&lt;p&gt;The Gateway Center&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add something here&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Lilly Grella</title>
+        <published>2021-04-01T08:50:45+00:00</published>
+        <updated>2021-04-01T08:50:45+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="lillygrella.netlify.app/authors/lilly-grella/"/>
+        <id>lillygrella.netlify.app/authors/lilly-grella/</id>
+        
+        <content type="html" xml:base="lillygrella.netlify.app/authors/lilly-grella/">&lt;p&gt;Creator of &lt;strong&gt;AdiDoks&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Lgrella&quot;&gt;@lillygrella&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
