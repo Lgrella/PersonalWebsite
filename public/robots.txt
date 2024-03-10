@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: lillygrella.netlify.app/sitemap.xml
